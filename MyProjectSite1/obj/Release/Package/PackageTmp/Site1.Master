@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="MyProjectSite1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Welcome Institute of Studies</title>
+    <link rel="stylesheet" href="register.css" type="text/css" media="screen" />
+     
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <header style="background-color:white;text-align:center;height:220px;width:92%;vertical-align:middle;">
+       <img id="logo" src="images/logo.jpg" style="text-align:center;width:80%;height:250px" />
+       <hr />
+   </header>
+    <form id="form1" runat="server">
+        <br />
+       <div style="padding-left:50px;padding-top:40px;">
+         <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Font-Bold="true" Font-Names="Verdana">
+        <Items>
+            <asp:MenuItem NavigateUrl="Default.aspx" Text="Home"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="Register.aspx" Text="Register"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="Login.aspx" Text="Logout"></asp:MenuItem>
+        </Items>
+        <StaticMenuItemStyle HorizontalPadding="10px" />
+        <StaticMenuStyle HorizontalPadding="10px" />
+    </asp:Menu>
+           </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
